@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="width: 400px; float: left; font-family: Cookie, Arial, sans-serif, cursive; font-size: 32px">
+      {{ 'HOME.HOME' | translate}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <div style="margin: 0" *ngIf="home$ | async as home  ; else elseTemplate">
+    <div *ngFor="let item of home | slice: 0:contador">
+
+      <div *ngIf="calc(item.lat, item.long) < 5000">
+
+
+        <ion-card style="background-color: #1b1b1b">
+
+          <ion-fab style="right: 0; top: 0; margin: 5px">
+            <ion-avatar>
+              <ng-container *ngIf="item.urlLogo; else elseTemplateLogo">
+                <img [src]="item.urlLogo">
+              </ng-container>
+              <ng-template #elseTemplateLogo>
+                <img src="assets/iconBs.png">
+              </ng-template>
+            </ion-avatar>
+          </ion-fab>
+
+
+          <ng-container *ngIf="item.url; else elseTemplateImg">
+            <img [src]="item.url" style="max-height: 300px; height: auto; width: auto;">
+          </ng-container>
+          <ng-template #elseTemplateImg>
+            <img src="assets/semImagem.png">
+          </ng-template>
+
+
+          <ion-row>
+            <ion-col>
+              <ion-row style="margin-top: 12px">
+                <p style="color: #ce9c6b">{{item.txt_NomeSalao}}</p>
+              </ion-row>
+
+              <ion-row>
+                <p color="medium">
+                  <ion-icon name="cut"></ion-icon>{{item.txt_End}}, {{item.txt_Numero}}, {{item.txt_NomeResp}},
+                  {{item.txt_Cidade}}
+                </p>
+              </ion-row>
+
+
+              <ion-row>
+                <p style="font-weight: bold" color="medium">
+                  <ion-icon name="pin"></ion-icon>{{ d/0.09 | number:'2.0-0' }}min
+                </p>
+                <p color="medium">({{ d | number:'2.1-1' }})Km</p>
+              </ion-row>
+            </ion-col>
+
+            <button round Class="btn btn-primary" (click)="onClick(item.fk)"
+              style="margin-right: 5px; margin-bottom: 5px; height: 25px; margin-top: 20px;">{{'HOME.HORARY' | translate}}</button>
+
+          </ion-row>
+
+        </ion-card>
+
+      </div>
+    </div>
+  </div>
+
+  <ng-template #elseTemplate>
+      <p style="color:  #989aa2">{{'HOME.LOADING' | translate}}</p>
+    </ng-template>
+
+    
+
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="{{ 'HOME.LOADMORE' | translate}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+</ion-content>
+
+

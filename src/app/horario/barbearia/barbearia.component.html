@@ -1,0 +1,343 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="width: 400px; float: left; font-family: Cookie, Arial, sans-serif, cursive; font-size: 32px">
+      {{ 'HORARY.HORARY' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <div *ngIf="precos$ | async as nomeSaloon">
+
+    <div *ngFor="let item of nomeSaloon">
+
+      <ion-row style="margin-left: 25%; margin-right: 25%">
+        <p style="color: #ce9c6b">{{ item.txt_NomeSalao}}</p>
+      </ion-row>
+
+      <div *ngIf="gravaNome(item.txt_NomeSalao)"></div>
+
+      <div *ngIf="gravaId(item.userIdOneSignalSalao)"></div>
+
+    </div>
+  </div>
+
+
+
+  <ion-card style="background-color: #1b1b1b">
+
+    <ion-card-header>
+      <ion-icon name="time"></ion-icon>{{ 'HORARY.BUSINESS' | translate }}
+    </ion-card-header>
+
+
+
+
+
+    <ion-row style="margin-bottom: 5px">
+
+      <ion-col>
+        <p style="font-weight: bold" color="medium">
+          {{ 'HORARY.SUNDAY' | translate }}
+        </p>
+      </ion-col>
+
+
+      <ion-col size="7" *ngIf="horariosDom$ | async as horariosDom">
+
+        <div *ngFor="let item of horariosDom">
+          <ng-container *ngIf="item.closedDom; else elseTemplateDom">
+            <ion-row *ngFor="let item of item.formArrayDomingo">
+              <p color="medium">
+                {{item.itemPropertyOneDomingo}} - {{item.itemPropertyTwoDomingo}}
+              </p>
+            </ion-row>
+          </ng-container>
+          <ng-template #elseTemplateDom>
+            <p color="medium">
+              {{ 'HORARY.CLOSED' | translate }}
+            </p>
+          </ng-template>
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+    <ion-row style="margin-bottom: 5px">
+
+      <ion-col>
+        <p style="font-weight: bold" color="medium">
+          {{ 'HORARY.MONDAY' | translate }}
+        </p>
+      </ion-col>
+
+
+      <ion-col size="7" *ngIf="horariosSeg$ | async as horariosSeg">
+
+        <div *ngFor="let item of horariosSeg">
+
+          <ng-container *ngIf="item.closedSeg; else elseTemplateSeg">
+
+            <ion-row *ngFor="let item of item.formArraySegunda">
+              <p color="medium">
+                {{item.itemPropertyOneSegunda}} - {{item.itemPropertyTwoSegunda}}
+              </p>
+            </ion-row>
+          </ng-container>
+          <ng-template #elseTemplateSeg>
+            <p color="medium">
+              {{ 'HORARY.CLOSED' | translate }}
+            </p>
+          </ng-template>
+
+
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+
+
+    <ion-row style="margin-bottom: 5px">
+
+      <ion-col>
+        <p style="font-weight: bold" color="medium">
+          {{ 'HORARY.TUESDAY' | translate }}
+        </p>
+      </ion-col>
+
+
+      <ion-col size="7" *ngIf="horariosTer$ | async as horariosTer">
+
+        <div *ngFor="let item of horariosTer">
+
+          <ng-container *ngIf="item.closedTer; else elseTemplateTer">
+            <ion-row *ngFor="let item of item.formArrayTerca">
+              <p color="medium">
+                {{item.itemPropertyOneTerca}} - {{item.itemPropertyTwoTerca}}
+              </p>
+            </ion-row>
+          </ng-container>
+          <ng-template #elseTemplateTer>
+            <p color="medium">
+              {{ 'HORARY.CLOSED' | translate }}
+            </p>
+          </ng-template>
+
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+
+
+
+
+    <ion-row style="margin-bottom: 5px">
+
+      <ion-col>
+        <p style="font-weight: bold" color="medium">
+          {{ 'HORARY.WEDNESDAY' | translate }}
+        </p>
+      </ion-col>
+
+
+      <ion-col size="7" *ngIf="horariosQua$ | async as horariosQua">
+        <div *ngFor="let item of horariosQua">
+
+          <ng-container *ngIf="item.closedQua; else elseTemplateQua">
+            <ion-row *ngFor="let item of item.formArrayQuarta">
+              <p color="medium">
+                {{item.itemPropertyOneQuarta}} - {{item.itemPropertyTwoQuarta}}
+              </p>
+            </ion-row>
+          </ng-container>
+          <ng-template #elseTemplateQua>
+            <p color="medium">
+              {{ 'HORARY.CLOSED' | translate }}
+            </p>
+          </ng-template>
+
+
+
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+
+
+
+
+
+    <ion-row style="margin-bottom: 5px">
+
+      <ion-col>
+        <p style="font-weight: bold" color="medium">
+          {{ 'HORARY.THURSDAY' | translate }}
+        </p>
+      </ion-col>
+
+
+      <ion-col size="7" *ngIf="horariosQui$ | async as horariosQui">
+
+        <div *ngFor="let item of horariosQui">
+
+          <ng-container *ngIf="item.closedQui; else elseTemplateQui">
+            <ion-row *ngFor="let item of item.formArrayQuinta">
+              <p color="medium">
+                {{item.itemPropertyOneQuinta}} - {{item.itemPropertyTwoQuinta}}
+              </p>
+            </ion-row>
+          </ng-container>
+          <ng-template #elseTemplateQui>
+            <p color="medium">
+              {{ 'HORARY.CLOSED' | translate }}
+            </p>
+          </ng-template>
+
+
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+
+    <ion-row style="margin-bottom: 5px">
+
+      <ion-col>
+        <p style="font-weight: bold" color="medium">
+          {{ 'HORARY.FRIDAY' | translate }}
+        </p>
+      </ion-col>
+
+
+      <ion-col size="7" *ngIf="horariosSex$ | async as horariosSex">
+
+        <div *ngFor="let item of horariosSex">
+          <ng-container *ngIf="item.closedSex; else elseTemplateSex">
+            <ion-row *ngFor="let item of item.formArraySexta">
+              <p color="medium">
+                {{item.itemPropertyOneSexta}} - {{item.itemPropertyTwoSexta}}
+              </p>
+            </ion-row>
+          </ng-container>
+          <ng-template #elseTemplateSex>
+            <p color="medium">
+              {{ 'HORARY.CLOSED' | translate }}
+            </p>
+          </ng-template>
+
+
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+
+    <ion-row style="margin-bottom: 10px">
+
+      <ion-col>
+        <p style="font-weight: bold" color="medium">
+          {{ 'HORARY.SATURDAY' | translate }}
+        </p>
+      </ion-col>
+
+
+      <ion-col size="7" *ngIf="horariosSab$ | async as horariosSab">
+
+        <div *ngFor="let item of horariosSab">
+          <ng-container *ngIf="item.closedSab; else elseTemplateSab">
+            <ion-row *ngFor="let item of item.formArraySabado">
+              <p color="medium">
+                {{item.itemPropertyOneSabado}} - {{item.itemPropertyTwoSabado}}
+              </p>
+            </ion-row>
+          </ng-container>
+          <ng-template #elseTemplateSab>
+            <p color="medium">
+              {{ 'HORARY.CLOSED' | translate }}
+            </p>
+          </ng-template>
+
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+
+
+    <div class="row justify-content-center" style="margin-bottom: 10px" *ngIf="precos$ | async as precos">
+
+      <ion-card-header>
+        <ion-icon name="cash"></ion-icon> {{ 'HORARY.PRICING' | translate }}
+      </ion-card-header>
+      <div *ngFor="let item of precos">
+
+        <ion-row *ngFor="let item of item.formArrayPrecos">
+
+          <ion-col size="8">
+            <p color="medium" style="font-weight: bold">{{ item.itemPropertyServico }}</p>
+          </ion-col>
+
+
+
+          <ion-col>
+            <p color="medium" class="price" style="color:  #ce9c6b">{{ item.itemPropertyPreco }}</p>
+          </ion-col>
+        </ion-row>
+
+      </div>
+    </div>
+
+
+  </ion-card>
+
+  <ion-row>
+    <ion-col size="8"></ion-col>
+ 
+  <ion-col>
+      <button round Class="btn btn-primary" (click)="openPopover($event)"
+        style="margin-left: 18px; margin-bottom: 5px; margin-top: 15px; height: 25px">{{ 'HORARY.SCHED' | translate }}</button>
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-content>

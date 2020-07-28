@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="width: 400px; float: left; font-family: Cookie, Arial, sans-serif, cursive; font-size: 32px">
+      {{ 'LIST.LIST' | translate}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="home$ | async as home">
+    <div *ngFor="let item of home | slice: 0:contador">
+
+      <div *ngIf="calc(item.lat, item.long) < 5000">
+        <ion-item (click)="onClick(item.fk)">
+
+          <ion-avatar style="position: absolute">
+            <ng-container *ngIf="item.urlLogo; else elseTemplateLogo">
+              <img [src]="item.urlLogo">
+            </ng-container>
+            <ng-template #elseTemplateLogo>
+              <img src="assets/iconBs2.png">
+            </ng-template>
+          </ion-avatar>
+
+
+          <ion-col>
+            <ion-row style="margin-left: 50px">
+              <p style="color: #ce9c6b">{{item.txt_NomeSalao}}</p>
+            </ion-row>
+
+            <ion-row style="margin-left: 50px">
+              <p style="font-weight: bold" style="color:  #989aa2">
+                <ion-icon name="pin"></ion-icon>{{ d/0.09 | number:'2.0-0' }}min
+              </p>
+              <p style="color:  #989aa2">({{ d | number:'2.1-1' }})Km</p>
+            </ion-row>
+          </ion-col>
+
+
+        </ion-item>
+      </div>
+    </div>
+
+  </ion-list>
+
+
+
+  
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="{{ 'HOME.LOADMORE' | translate}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+
+</ion-content>

@@ -1,0 +1,56 @@
+{
+    "entrada": {
+        "Barbershops": "BarberPro für Friseurläden",
+        "Customers": "BarberPro für Kunden"
+    },
+    "HOME": {
+        "HOME": "Startseite",
+        "HORARY": "Stundenplan",
+        "LOADING": "Warten sie mal...",
+        "LOADMORE": "Daten laden..."
+    },
+    "LIST": {
+        "LIST": "Liste der Friseurläden"
+    },
+    "MYSCHED": {
+        "MYSCHED": "Meine Termine",
+        "AVISO": "Es sind keine Datensätze vorhanden."
+    },
+    "LOGIN": {
+        "LOGINTITLE": "Anmelden",
+        "EMAIL": "E-mail",
+        "PASSWORD": "Kennwort",
+        "LOGIN": "Anmelden",
+        "RESETACCOUNT": "Konto zurücksetzen",
+        "CREATEACCOUNT": "Benutzerkonto anlegen"
+    },
+    "CREATE": {
+        "CREATETITLE": "Neuen Account erstellen",
+        "CREATE": "Erstellen"
+    },
+    "RESET": {
+        "RESETTITLE": "Konto zurücksetzen",
+        "RESET": "Zurücksetzen"
+    },
+    "HORARY": {
+        "HORARY": "Zeitplan",
+        "BUSINESS": "Öffnungszeiten",
+        "CLOSED": "Geschlossen",
+        "SUNDAY": "Sonntag",
+        "MONDAY": "Montag",
+        "TUESDAY": "Dienstag",
+        "WEDNESDAY": "Mittwoch",
+        "THURSDAY": "Donnerstag",
+        "FRIDAY": "Freitag",
+        "SATURDAY":"Samstag",
+        "PRICING":"Preis",
+        "SCHED":"Zeitplan",
+        "BARBERNAME": "Nome do Salão"
+    },
+    "POPOVER": {
+        "DATE": "der Termin",
+        "TIME": "Zeit",
+        "RESERVE":"Reservieren",
+        "CLOSE": "Schließen"
+    }
+}

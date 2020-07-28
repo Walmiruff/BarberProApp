@@ -1,0 +1,7 @@
+{
+  "name": "AppBarberShop",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

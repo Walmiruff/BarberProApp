@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-row> <img src="assets/iconBs.png" height="40" width="40">
+            <ion-title style="width: 400px; float: left; font-family: Cookie, Arial, sans-serif, cursive; font-size: 32px">BarberPro</ion-title>
+          </ion-row>
+
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon color="medium" slot="start" [name]="p.icon"></ion-icon>
+              <ion-label color="medium">
+                {{p.title | translate}}
+              </ion-label>
+            </ion-item>z
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+
+
+

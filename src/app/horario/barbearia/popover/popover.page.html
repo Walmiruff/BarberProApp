@@ -1,0 +1,41 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>popover</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content color="light" padding >
+
+  <form [formGroup]="formularioAgen"  class="appointment-form2">
+
+    <ion-row>
+      
+      <ion-col size="6">
+        <input type="date"  class="form-control2" formControlName="data" id="data" [ngModel]="data | date:'yyyy-MM-dd'" placeholder="{{ 'POPOVER.DATE' | translate }}">
+      </ion-col>
+
+      <ion-col size="6">
+        <input type="time" class="form-control2" formControlName="hora" id="hora" placeholder="{{ 'POPOVER.TIME' | translate }}">
+      </ion-col>
+
+    </ion-row>
+
+
+
+    <ion-row>
+
+      <ion-col size="6">
+        <button round Class="btn btn-primary" (click)="enviarForm()"  style="margin-left: 5px; margin-bottom: 5px; margin-top: 15px; height: 25px">{{ 'POPOVER.RESERVE' | translate }}</button>
+      </ion-col>
+
+
+      <ion-col size="6">
+        <button round Class="btn btn-primary" (click)="closePopover()" style="margin-left: 5px; margin-bottom: 5px; margin-top: 15px; height: 25px">{{ 'POPOVER.CLOSE' | translate }}</button>
+      </ion-col>
+
+
+    </ion-row>
+
+
+  </form>
+</ion-content>

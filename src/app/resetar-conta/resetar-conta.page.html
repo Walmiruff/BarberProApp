@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title style="width: 400px; float: left; font-family: Cookie, Arial, sans-serif, cursive; font-size: 32px">
+          {{ 'RESET.RESETTITLE' | translate }}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content color="primary" padding>
+  
+    <!--div *ngIf="isUserLoggedIn" style="text-align: center">
+          <img src="userInfo.picture.data.url">
+          <h3>{{userInfo.first_name}}</h3>
+          <p>{{userInfo.email}}</p>
+          <p>Teste {{userinfo}}</p>
+        </div-->
+  
+  
+    <!--div *ngIf="isUserLoggedIn" style="text-align: center">
+          <img src="userInfo.imageUrl">
+          <h3>{{userInfo.displayName}}</h3>
+          <p>{{userInfo.email}}</p>
+          <p>Teste {{userinfo}}</p>
+        </div-->
+  
+  
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2"></ion-col>
+        <ion-col size="8"> <img src="assets/logoLogin.png"></ion-col>
+        <ion-col size="2"></ion-col>
+  
+      </ion-row>
+    </ion-grid>
+  
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1"></ion-col>
+  
+        <ion-col>
+          <form  [formGroup]="formulario" (ngSubmit)="onSubmit()" class="appointment-form">
+  
+            <ion-row>
+  
+              <ion-row>
+                <input type="text" class="form-control" placeholder="{{ 'LOGIN.EMAIL' | translate }}" formControlName="email" id="email">
+              </ion-row>
+              <app-error-msg [control]="formulario.get('email')" label="{{ 'LOGIN.EMAIL' | translate }}"></app-error-msg>
+            </ion-row>
+           
+  
+            <ion-row>
+              <ion-row>
+                <ion-row>
+                  <button round Class="btn btn-primary" style="margin-left: 5px; margin-bottom: 5px; margin-top: 20px; height: 25px; width: 250px;">{{ 'RESET.RESET' | translate }}</button>
+  
+  
+                </ion-row>
+              </ion-row>
+          
+  
+  
+            </ion-row>
+  
+          </form>
+  
+  
+        </ion-col>
+  
+  
+        <ion-col size="1"></ion-col>
+      </ion-row>
+  
+  
+    </ion-grid>
+  
+  
+  
+  
+  
+  </ion-content>

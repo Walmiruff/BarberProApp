@@ -1,0 +1,475 @@
+{
+  "precos": [
+    {
+      "id": 1,
+      "fk": "2",
+      "formArrayPrecos": [
+        {
+          "itemPropertyServico": "Men's Haircut",
+          "itemPropertyPreco": "$ 20.00"
+        },
+        {
+          "itemPropertyServico": "Children Haircut",
+          "itemPropertyPreco": "$ 15.00"
+        },
+        {
+          "itemPropertyServico": "Pintura",
+          "itemPropertyPreco": "$ 12.00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fk": "1",
+      "formArrayPrecos": [
+        {
+          "itemPropertyServico": "Corte",
+          "itemPropertyPreco": "$ 12.00"
+        },
+        {
+          "itemPropertyServico": "Aparar",
+          "itemPropertyPreco": "$ 20.00"
+        }
+      ]
+    }
+  ],
+  "calendario": [
+    {
+      "id": 7,
+      "fk": "1",
+      "title": "New client",
+      "start": "2018-11-27T02:00:00.000Z",
+      "end": "2018-11-28T01:59:59.999Z",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      }
+    },
+    {
+      "id": 8,
+      "fk": "1",
+      "title": "New client",
+      "start": "2018-11-27T02:00:00.000Z",
+      "end": "2018-11-28T01:59:59.999Z",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      }
+    },
+    {
+      "id": 9,
+      "fk": "3",
+      "title": "New client",
+      "start": "2018-11-27T02:00:00.000Z",
+      "end": "2018-11-28T01:59:59.999Z",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      }
+    },
+    {
+      "id": 11,
+      "fk": "2",
+      "title": "New client",
+      "start": "2018-11-27T02:00:00.000Z",
+      "end": "2018-11-28T01:59:59.999Z",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      }
+    },
+    {
+      "id": 12,
+      "fk": "2",
+      "title": "New client",
+      "start": "2018-11-27T02:00:00.000Z",
+      "end": "2018-11-28T01:59:59.999Z",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      }
+    },
+    {
+      "id": 13,
+      "fk": "2",
+      "title": "New client",
+      "start": "2018-11-27T02:00:00.000Z",
+      "end": "2018-11-28T01:59:59.999Z",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      }
+    },
+    {
+      "id": 14,
+      "fk": "2",
+      "title": "New client",
+      "start": "2018-11-27T02:00:00.000Z",
+      "end": "2018-11-28T01:59:59.999Z",
+      "color": {
+        "primary": "#1e90ff",
+        "secondary": "#D1E8FF"
+      },
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      }
+    }
+  ],
+  "tb_horariodom": [
+    {
+      "id": 1,
+      "fk": "2",
+      "closedDom": false,
+      "formArrayDomingo": [
+        {
+          "itemPropertyOneDomingo": "",
+          "itemPropertyTwoDomingo": ""
+        }
+      ]
+    }
+  ],
+  "tb_horarioseg": [
+    {
+      "id": 1,
+      "fk": "2",
+      "closedSeg": false,
+      "formArraySegunda": [
+        {
+          "itemPropertyOneSegunda": "",
+          "itemPropertyTwoSegunda": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fk": "1",
+      "formArraySegunda": [
+        {
+          "itemPropertyOneSegunda": "",
+          "itemPropertyTwoSegunda": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fk": "7",
+      "closedSeg": false,
+      "formArraySegunda": [
+        {
+          "itemPropertyOneSegunda": "",
+          "itemPropertyTwoSegunda": ""
+        }
+      ]
+    }
+  ],
+  "tb_horarioter": [
+    {
+      "id": 1,
+      "fk": "2",
+      "closedTer": false,
+      "formArrayTerca": [
+        {
+          "itemPropertyOneTerca": "",
+          "itemPropertyTwoTerca": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fk": "1",
+      "formArrayTerca": [
+        {
+          "itemPropertyOneTerca": "",
+          "itemPropertyTwoTerca": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fk": "7",
+      "closedTer": false,
+      "formArrayTerca": [
+        {
+          "itemPropertyOneTerca": "",
+          "itemPropertyTwoTerca": ""
+        }
+      ]
+    }
+  ],
+  "tb_horarioqua": [
+    {
+      "id": 1,
+      "fk": "2",
+      "closedQua": false,
+      "formArrayQuarta": [
+        {
+          "itemPropertyOneQuarta": "",
+          "itemPropertyTwoQuarta": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fk": "1",
+      "formArrayQuarta": [
+        {
+          "itemPropertyOneQuarta": "",
+          "itemPropertyTwoQuarta": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fk": "7",
+      "closedQua": false,
+      "formArrayQuarta": [
+        {
+          "itemPropertyOneQuarta": "",
+          "itemPropertyTwoQuarta": ""
+        }
+      ]
+    }
+  ],
+  "tb_horarioqui": [
+    {
+      "id": 1,
+      "fk": "2",
+      "closedQui": false,
+      "formArrayQuinta": [
+        {
+          "itemPropertyOneQuinta": "",
+          "itemPropertyTwoQuinta": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fk": "1",
+      "formArrayQuinta": [
+        {
+          "itemPropertyOneQuinta": "",
+          "itemPropertyTwoQuinta": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fk": "7",
+      "closedQui": false,
+      "formArrayQuinta": [
+        {
+          "itemPropertyOneQuinta": "",
+          "itemPropertyTwoQuinta": ""
+        }
+      ]
+    }
+  ],
+  "tb_horariosex": [
+    {
+      "id": 1,
+      "fk": "2",
+      "closedSex": false,
+      "formArraySexta": [
+        {
+          "itemPropertyOneSexta": "",
+          "itemPropertyTwoSexta": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fk": "1",
+      "formArraySexta": [
+        {
+          "itemPropertyOneSexta": "",
+          "itemPropertyTwoSexta": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fk": "7",
+      "closedSex": false,
+      "formArraySexta": [
+        {
+          "itemPropertyOneSexta": "",
+          "itemPropertyTwoSexta": ""
+        }
+      ]
+    }
+  ],
+  "tb_horariosab": [
+    {
+      "id": 1,
+      "fk": "2",
+      "closedSab": false,
+      "formArraySabado": [
+        {
+          "itemPropertyOneSabado": "",
+          "itemPropertyTwoSabado": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fk": "1",
+      "formArraySabado": [
+        {
+          "itemPropertyOneSabado": "",
+          "itemPropertyTwoSabado": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fk": "7",
+      "closedSab": false,
+      "formArraySabado": [
+        {
+          "itemPropertyOneSabado": "",
+          "itemPropertyTwoSabado": ""
+        }
+      ]
+    }
+  ],
+  "userconfig": [
+    {
+      "id": "1",
+      "lat": -22.5283298492432,
+      "long": -44.1346092224121,
+      "txt_NomeSalao": "Nome Barbershop TEstes",
+      "txt_NomeResp": "Voce",
+      "txt_pais": "Ireland",
+      "txt_End": "Av. kkkk",
+      "txt_CEP": "27330010",
+      "txt_Cidade": "Dublin",
+      "txt_UF": "Ir",
+      "txt_Numero": "15947",
+      "txt_Cel": "24 998132757",
+      "txt_Tel": "24 331425825",
+      "txt_email": "walmir@email.com"
+    },
+    {
+      "id": "2",
+      "lat": -22.5283298492432,
+      "long": -44.1346092224121,
+      "txt_NomeSalao": "Teste editar tste",
+      "txt_NomeResp": "eu",
+      "txt_pais": "eu",
+      "txt_End": "eu",
+      "txt_CEP": "eu",
+      "txt_Cidade": "eu",
+      "txt_UF": "eu",
+      "txt_Numero": "eu",
+      "txt_Cel": "eu",
+      "txt_Tel": "eu",
+      "txt_email": "eu@eu"
+    },
+    {
+      "id": "7",
+      "lat": -22.5283298492432,
+      "long": -44.1346092224121,
+      "txt_NomeSalao": "teste7",
+      "txt_NomeResp": "teste7",
+      "txt_pais": "teste7",
+      "txt_End": "teste7",
+      "txt_CEP": "teste7",
+      "txt_Cidade": "teste7",
+      "txt_UF": "te",
+      "txt_Numero": "teste7",
+      "txt_Cel": "teste7teste7",
+      "txt_Tel": "teste7",
+      "txt_email": "teste7@teste7"
+    },
+    {
+      "id": "8",
+      "lat": -22.5283298492432,
+      "long": -44.1346092224121,
+      "txt_NomeSalao": "Teste Bairro BM",
+      "txt_NomeResp": "Ponte Alta",
+      "txt_pais": "BR",
+      "txt_End": "Av do Contorno",
+      "txt_CEP": "2733010",
+      "txt_Cidade": "Volta Redonda",
+      "txt_UF": "RJ",
+      "txt_Numero": "1620",
+      "txt_Cel": "24 998132757",
+      "txt_Tel": "24 33426392",
+      "txt_email": "walmiruff@gmail.com"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "email@email.com",
+      "password": "typicode"
+    },
+    {
+      "id": 2,
+      "email": "email2@email.com",
+      "password": "typicode"
+    },
+    {
+      "id": 3,
+      "email": "email3@email.com",
+      "password": "typicode"
+    },
+    {
+      "id": 4,
+      "email": "email4@email.com",
+      "password": "typicode"
+    },
+    {
+      "id": 5,
+      "email": "email5@email.com",
+      "password": "typicode"
+    },
+    {
+      "email": "e@email",
+      "password": "walmir",
+      "id": 7
+    },
+    {
+      "email": "e@email.com",
+      "password": "walmir",
+      "id": 8
+    },
+    {
+      "email": "tesate@ww",
+      "password": "walmir",
+      "id": 10
+    }
+  ]
+}

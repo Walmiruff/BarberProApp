@@ -1,0 +1,56 @@
+{
+    "entrada": {
+        "Barbershops": "BarberPro per i Barbieri",
+        "Customers": "BarberPro per i Clienti"
+    },
+    "HOME": {
+        "HOME": "Pagina Iniziale",
+        "HORARY": "Orario",
+        "LOADING": "Caricamento in corso...",
+        "LOADMORE": "Caricamento in corso..."
+    },
+    "LIST": {
+        "LIST": "Elenco dei Barbieri"
+    },
+    "MYSCHED": {
+        "MYSCHED": "I Miei Programmi",
+        "AVISO": "Non ci sono record da elencare."
+    },
+    "LOGIN": {
+        "LOGINTITLE": "Accesso",
+        "EMAIL": "E-mail",
+        "PASSWORD": "Parola d'ordine",
+        "LOGIN": "Accesso",
+        "RESETACCOUNT": "Reimposta account",
+        "CREATEACCOUNT": "Creare un profilo"
+    },
+    "CREATE": {
+        "CREATETITLE": "Crea un nuovo account",
+        "CREATE": "Creare"
+    },
+    "RESET": {
+        "RESETTITLE": "Reimposta account",
+        "RESET": "Reimposta account"
+    },
+    "HORARY": {
+        "HORARY": "Oraria",
+        "BUSINESS": "Orario di apertura",
+        "CLOSED": "Chiuso",
+        "SUNDAY": "Domenica",
+        "MONDAY": "Lunedì",
+        "TUESDAY": "Martedì",
+        "WEDNESDAY": "Mercoledì",
+        "THURSDAY": "Giovedì",
+        "FRIDAY": "Venerdì",
+        "SATURDAY":"Sabato",
+        "PRICING":"Prezzi",
+        "SCHED":"Programma",
+        "BARBERNAME": "Nome do Salão"
+    },
+    "POPOVER": {
+        "DATE": "Data",
+        "TIME": "Orario",
+        "RESERVE":"Prenotare",
+        "CLOSE": "Chiudere"
+    }
+}
